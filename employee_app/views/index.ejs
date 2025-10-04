@@ -1,0 +1,38 @@
+<% layout('layout', { page: 'home' }) %>
+
+<h1>Employees</h1>
+
+<table class="employees">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Designation</th>
+      <th>Location</th>
+      <th>Salary</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if (employees.length === 0) { %>
+      <tr><td colspan="6" style="text-align:center">No employees found.</td></tr>
+    <% } else { %>
+      <% employees.forEach((emp, idx) => { %>
+        <tr>
+          <td><%= idx + 1 %></td>
+          <td><%= emp.EmployeeName %></td>
+          <td><%= emp.EmployeeDesignation %></td>
+          <td><%= emp.EmployeeLocation %></td>
+          <td>₹<%= emp.Salary.toLocaleString() %></td>
+          <td class="actions">
+            <a class="btn" href="/edit/<%= emp.id %>">Update</a>
+
+            <form class="inline-form" action="/delete/<%= emp.id %>" method="POST" onsubmit="return confirm('Delete this employee?');">
+              <button class="btn btn-danger" type="submit">Delete</button>
+            </form>
+          </td>
+        </tr>
+      <% }) %>
+    <% } %>
+  </tbody>
+</table>

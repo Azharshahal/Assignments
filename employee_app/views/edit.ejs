@@ -1,0 +1,26 @@
+<% layout('layout', { page: '' }) %>
+
+<h1>Edit Employee</h1>
+
+<form class="form" action="/edit/<%= emp.id %>" method="POST">
+  <label>Employee Name
+    <input name="EmployeeName" value="<%= emp.EmployeeName %>" required />
+  </label>
+
+  <label>Employee Designation
+    <input name="EmployeeDesignation" value="<%= emp.EmployeeDesignation %>" required />
+  </label>
+
+  <label>Employee Location
+    <input name="EmployeeLocation" value="<%= emp.EmployeeLocation %>" required />
+  </label>
+
+  <label>Salary
+    <input name="Salary" type="number" min="0" value="<%= emp.Salary %>" required />
+  </label>
+
+  <div>
+    <button class="btn" type="submit">Save Changes</button>
+    <a class="btn btn-secondary" href="/">Cancel</a>
+  </div>
+</form>

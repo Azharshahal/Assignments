@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Employee App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="/styles.css" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a class="brand" href="/">Employee App</a>
+      <div class="nav-links">
+        <a href="/" class="<%= (page === 'home') ? 'active' : '' %>">Home</a>
+        <a href="/add" class="<%= (page === 'add') ? 'active' : '' %>">Add Employee</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <%- body %>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Made with ❤️ - EmbeddedJS (EJS) demo</div>
+  </footer>
+</body>
+</html>

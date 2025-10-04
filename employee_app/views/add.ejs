@@ -1,0 +1,26 @@
+<% layout('layout', { page: 'add' }) %>
+
+<h1>Add Employee</h1>
+
+<form class="form" action="/add" method="POST">
+  <label>Employee Name
+    <input name="EmployeeName" required />
+  </label>
+
+  <label>Employee Designation
+    <input name="EmployeeDesignation" required />
+  </label>
+
+  <label>Employee Location
+    <input name="EmployeeLocation" required />
+  </label>
+
+  <label>Salary
+    <input name="Salary" type="number" min="0" required />
+  </label>
+
+  <div>
+    <button class="btn" type="submit">Add Employee</button>
+    <a class="btn btn-secondary" href="/">Cancel</a>
+  </div>
+</form>

@@ -1,0 +1,24 @@
+:root { --accent:#2b8aef; --muted:#666; --danger:#e74c3c; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:#222; background:#f5f7fb; }
+.container { max-width:1000px; margin:24px auto; padding:0 18px; }
+.navbar { background:white; box-shadow:0 1px 4px rgba(20,20,30,0.06); }
+.navbar .container { display:flex; align-items:center; justify-content:space-between; padding:12px 18px; }
+.brand { font-weight:700; color:var(--accent); text-decoration:none; font-size:18px; }
+.nav-links a { margin-left:12px; text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:6px; }
+.nav-links a.active, .nav-links a:hover { color:white; background:var(--accent); }
+
+h1 { margin-top:18px; }
+
+.employees { width:100%; border-collapse:collapse; background:white; box-shadow:0 1px 6px rgba(20,20,30,0.04); border-radius:8px; overflow:hidden; }
+.employees th, .employees td { padding:12px 14px; text-align:left; border-bottom:1px solid #f0f0f2; }
+.employees thead { background:#fafbfd; color:#333; font-weight:600; }
+.actions { display:flex; gap:8px; align-items:center; }
+.btn { display:inline-block; padding:8px 12px; text-decoration:none; border-radius:6px; background:var(--accent); color:white; border:none; cursor:pointer; }
+.btn-secondary { background:#6c757d; }
+.btn-danger { background:var(--danger); }
+.inline-form { display:inline-block; margin:0; padding:0; }
+
+.form { background:white; padding:18px; border-radius:8px; box-shadow:0 1px 6px rgba(20,20,30,0.04); max-width:600px; }
+.form label { display:block; margin-bottom:12px; font-size:14px; color:#333; }
+.form input { width:100%; padding:10px 12px; border-radius:6px; border:1px solid #e0e4ea; margin-top:6px; box-sizing:border-box; }
+.footer { margin-top:30px; padding:12px 0; color:#777; text-align:center; }
