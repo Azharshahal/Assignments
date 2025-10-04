@@ -1,0 +1,9 @@
+<% layout('layout') %>
+<h1>Edit Employee</h1>
+<form action="/edit/<%= emp._id %>?_method=PUT" method="POST">
+  <input name="EmployeeName" value="<%= emp.EmployeeName %>" required>
+  <input name="EmployeeDesignation" value="<%= emp.EmployeeDesignation %>" required>
+  <input name="EmployeeLocation" value="<%= emp.EmployeeLocation %>" required>
+  <input name="Salary" type="number" value="<%= emp.Salary %>" required>
+  <button type="submit">Save</button>
+</form>

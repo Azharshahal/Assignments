@@ -1,0 +1,30 @@
+<% layout('layout') %>
+<h1>Employee List</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Designation</th>
+      <th>Location</th>
+      <th>Salary</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% employees.forEach(emp => { %>
+      <tr>
+        <td><%= emp.EmployeeName %></td>
+        <td><%= emp.EmployeeDesignation %></td>
+        <td><%= emp.EmployeeLocation %></td>
+        <td><%= emp.Salary %></td>
+        <td>
+          <a href="/edit/<%= emp._id %>">Edit</a>
+          <form action="/delete/<%= emp._id %>?_method=DELETE" method="POST" style="display:inline;">
+            <button type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>

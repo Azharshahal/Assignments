@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; margin: 20px; }
+.navbar { background: #2b8aef; padding: 10px; }
+.navbar a { color: white; margin-right: 10px; text-decoration: none; }
+table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+table, th, td { border: 1px solid #ccc; padding: 8px; }
+button { background: red; color: white; border: none; padding: 5px 10px; }

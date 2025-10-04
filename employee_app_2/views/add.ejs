@@ -1,0 +1,9 @@
+<% layout('layout') %>
+<h1>Add Employee</h1>
+<form action="/add" method="POST">
+  <input name="EmployeeName" placeholder="Name" required>
+  <input name="EmployeeDesignation" placeholder="Designation" required>
+  <input name="EmployeeLocation" placeholder="Location" required>
+  <input name="Salary" type="number" placeholder="Salary" required>
+  <button type="submit">Add</button>
+</form>
